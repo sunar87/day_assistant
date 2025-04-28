@@ -1,0 +1,1 @@
+stack: python, django, aiogram, celery, redis
