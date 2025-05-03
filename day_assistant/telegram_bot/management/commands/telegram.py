@@ -5,11 +5,14 @@ from aiogram.utils import executor
 from django.core.management.base import BaseCommand
 
 from telegram_bot.bot.bot_init import dp
+from telegram_bot.bot.weather import Weather
 
 
 @dp.message_handler(commands=['start'])
 async def send_insurance_expiry_info(message: types.Message):
-    await message.reply('hi')
+    weather = Weather('saint petersburg')
+    msg = weather.weather_output()
+    await message.reply(msg)
 
 
 class Command(BaseCommand):

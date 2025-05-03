@@ -129,3 +129,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 BOT_TOKEN = os.getenv('BOT_TOKEN')
+WEATHER_API_TOKEN = os.getenv('WEATHER_API_TOKEN')
