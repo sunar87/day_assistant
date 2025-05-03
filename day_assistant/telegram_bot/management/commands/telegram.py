@@ -12,7 +12,10 @@ from telegram_bot.bot.weather import Weather
 async def send_insurance_expiry_info(message: types.Message):
     weather = Weather('saint petersburg')
     msg = weather.weather_output()
-    await message.reply(msg)
+    await message.bot.send_message(
+        chat_id=message.chat.id,
+        text=msg
+    )
 
 
 class Command(BaseCommand):
