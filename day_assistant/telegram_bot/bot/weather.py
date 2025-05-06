@@ -56,7 +56,8 @@ class Weather:
                 start_hour, end_hour = data['time_range']
                 if time(start_hour) <= forecast_time < time(end_hour):
                     periods[period]['temp'] = forecast['main']['temp']
-                    periods[period]['description'] = forecast['weather'][0]['description']
+                    periods[period]['description'] = forecast[
+                        'weather'][0]['description']
                     break
         return periods
 
@@ -83,5 +84,4 @@ class Weather:
             f"Днём:\n"
             f"• {forecast['day']['temp']}°C, {forecast['day']['description']}\n\n"
             f"Вечером:\n"
-            f"• {forecast['evening']['temp']}°C, {forecast['evening']['description']}"
-        )
+            f"• {forecast['evening']['temp']}°C, {forecast['evening']['description']}")
