@@ -8,6 +8,9 @@ class User(models.Model):
     telegram_username = models.CharField(
         max_length=100
     )
+    notifications = models.BooleanField(
+        default=False
+    )
     city = models.CharField(
         max_length=50,
         default="Москва"
